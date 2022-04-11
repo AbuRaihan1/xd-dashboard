@@ -38,6 +38,19 @@
     <!-- google fonts poppins  -->
   </head>
 
+  <style>
+    .mystyle .main_body{
+  width: 100%;
+  padding: 25px;
+  background-color: coral;
+  color: white;
+  font-size: 25px;
+  box-sizing: border-box;
+}
+
+  </style>
+  <body>
+
   <!-- searchbar & header -->
   <div class="header_wrapper">
     <div class="home_and_dashboard">
@@ -109,7 +122,7 @@
       <div><i class="fas fa-bell"></i></div>
       <div><img src="images/Ellipse 1.png" alt="" /></div>
       <div>
-        <p class="text-white mt-3">john</p>
+        <p class="text-white mt-3" style="font-family:'Poppins', sans-serif;">John</p>
       </div>
       <div><i class="fa fa-angle-down text-white"></i></div>
     </div>
@@ -117,12 +130,12 @@
   <!-- searchbar & header -->
 
   <!------------Sidebar Start-------------->
-  <div class="sidebar">
+  <div class="sidebars">
     <input type="checkbox" id="check" />
 
     <label for="check">
-      <i class="fas fa-bars" id="bars"></i>
-      <i class="fas fa-times" id="close"></i>
+      <i class="fas fa-bars menu_bar" id="bars" onclick="myFunction()" ></i>
+      <i class="fa-solid fa-arrow-right-from-bracket close_bar" id="close"></i>
     </label>
 
     <div class="sidebar">
@@ -131,8 +144,8 @@
       </div>
 
       <ul class="sidebar_ul">
-        <li style="margin-top: 108px;">
-          <a href="#"><i class="fa fa-home-alt"></i> Dashboard</a>
+        <li style="margin-top: 118px;">
+          <a style="font-weight: 700;" href="#"><i class="fa fa-home-alt"></i> Dashboard</a>
         </li>
 
         
@@ -180,7 +193,8 @@
 
 
         <li href="#AffiliateonOpen" data-bs-toggle="collapse">
-          <a href="#"><i class="fa-solid fa-facebook"></i> Affiliate Network  <i class="fa fa-angle-down" style="margin-left:12px;"></i></a>
+          <a href="#">
+            <i class="fa-solid fa-network-wired"></i> Affiliate Network  <i class="fa fa-angle-down" style="margin-left:12px;"></i></a>
         </li>
 
         <div id="AffiliateonOpen" class="collapse collapse-item-sidebar">
@@ -230,6 +244,11 @@
   </div>
   <!------------Sidebar End-------------->
 
+<div class="main_body">
+
+</div>
+
+
 
   <!-- bootstrap link -->
   <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script> -->
@@ -245,5 +264,18 @@
   ></script>
   <!-- bootstrap link -->
 
-  <body></body>
+
+
+
+
+
+  <script>
+    function myFunction() {
+       var element = document.getElementById("bars");
+       element.classList.toggle("mystyle");
+    }
+    </script>
+
+
+</body>
 </html>

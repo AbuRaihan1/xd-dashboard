@@ -29,7 +29,12 @@
 
 /* scrollbar edit end */
 
-
+.main_body{
+  margin-top: 60px;
+  margin-left: 245px;
+  border: 1px solid red;
+  height: 100vh;
+}
 
 
 
@@ -87,6 +92,7 @@
   top:16px;
   left: 10px;
   color: #797979;
+  cursor: pointer;
 }
 
 .search_bar input {
@@ -125,10 +131,18 @@
 
 .msg_noti_user div{
   margin: 0px 10px;
+  cursor: pointer;
 }
 
 .msg_noti_user div i{
   color: #77A9FF;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: all .3s ease-in-out;
+}
+.msg_noti_user div i:hover{
+  background: rgb(46, 42, 42);
 }
 
 .msg_noti_user img{
@@ -148,14 +162,13 @@
   background-color: #2E4DD4;
   width: 240px;
   transition-duration: 0.5s;
-  z-index: 2000;
+  z-index: 43;
   left: 0px;
   top: 0px;
   font-weight: bold;
   bottom: 0;
   overflow: hidden;
-  font-family: 'Inter';
-
+  font-family: 'Poppins', sans-serif;
 }
 
 .sidebar:hover {
@@ -164,6 +177,10 @@
 
 .sidebar_logo {
   z-index: 5;
+  background: #2E4DD4!important;
+  width:240px;
+  margin-left: -10px !important;
+  padding-bottom: 40px;
 }
 
 .sidebar_logo {
@@ -206,7 +223,7 @@
   font-size: 17px;
   text-decoration: none;
   font-family: "Inter";
-  font-weight: 400;
+  font-weight: 300;
   transition: all .2s ease-in-out;
   border-radius: 15px;
   font-family: 'Poppins', sans-serif;
@@ -216,9 +233,11 @@
   margin-right: 5px;
 }
 
+/* .sidebar ul li a:first-child{
+  font-weight: 700 !important;
+} */
 
 .sidebar ul li:first-child {
- 
   font-weight: bold;
 }
 
@@ -253,36 +272,40 @@ label #close {
 }
 
 label #bars {
-  left: 10px;
-  top: 20px;
+  left: 170px;
+  top: 80px;
   position: fixed;
   background: none;
-  width: 50px;
   color: black;
   padding: 10px;
   font-size: 26px;
   z-index: 98;
   padding: 10px;
-  display: none;
+  z-index:44;
 }
 
 label #close {
-  top: 72px;
+  top: 18px;
   z-index: 10;
   opacity: 0;
   color: black;
   position: fixed;
   /* left:190px; */
  left: 180px;
+ font-size: 22px;
 }
 
 #check:checked ~ .sidebar {
-  left: 0px;
+  left: -240px;
 }
 
 #check:checked ~ label #bars {
   opacity: 0;
   pointer-events: none;
+}
+
+.menu_bar:focus .main_body{
+  margin-left: -240px !important;
 }
 
 #check:checked ~ label #close {
@@ -321,12 +344,27 @@ label #close {
 
 
 
+.left_move_body .main_body{
+  margin-left: -240px !important;
+}
+
+
+
+
+
+
+
+
 /* css media query code  */
 
 
+@media screen and (max-width:1300px) {
+  .home_and_dashboard{
+    display: none;
+    text-align: center;
+  }
 
-
-
+}
 @media screen and (max-width:1190px) {
   .home_and_dashboard{
     display: none;
