@@ -58,7 +58,7 @@
   display: flex;
   justify-content:center;
   align-items:center;
-  margin-left: 280px;
+  margin-left: 200px;
 }
 
 .home_and_dashboard h3{
@@ -291,7 +291,7 @@ label #close {
   color: black;
   position: fixed;
   /* left:190px; */
- left: 180px;
+ left: 200px;
  font-size: 22px;
 }
 
@@ -316,37 +316,14 @@ label #close {
 
 
 
-/* .sidebar li:hover {
-  background: #5160ac;
-} */
-
 .collapse-item-sidebar li{
   margin-left: -18px;
 }
-/* 
-.collapse-item-sidebar li a{
-  line-height: 55px;
-} */
-/* .inner_first{
-  border:1px solid red;
-  
-} */
-
-/* .collapse-item-sidebar li a:first-child{
-  margin-top: -10px;
-}
-
-.collapse-item-sidebar li a:hover {
-  background: rgb(247, 240, 240);
-} */
 
 /*---------------sidebar End----------------*/
 
 
 
-.left_move_body .main_body{
-  margin-left: -240px !important;
-}
 
 
 
@@ -357,6 +334,10 @@ label #close {
 
 /* css media query code  */
 
+@media screen and (min-width:1300px) {
+  
+}
+
 
 @media screen and (max-width:1300px) {
   .home_and_dashboard{
@@ -364,7 +345,39 @@ label #close {
     text-align: center;
   }
 
+  .search_bar input{
+    display:flex;
+    margin-left: 450px;
+  } 
+  
+  .inner_search i{
+    left: 460px !important;
+  }
+
+  .header_main_logo img{
+    display: none;
+  }
+
+  .sidebar{
+    left:-250px;
+  }
+
+
+  .inner_search i{
+    left: 310px;
+  }
+
+  label #bars {
+    top: 20px;
+    left: 20px;
+  }
+
+  #check:checked ~ .sidebar {
+    left:0px;
+  }
+
 }
+
 @media screen and (max-width:1190px) {
   .home_and_dashboard{
     display: none;
@@ -377,7 +390,7 @@ label #close {
 } 
 
 .inner_search i{
-  left: 310px;
+  left: 310px !important;
 }
 
 
@@ -391,9 +404,6 @@ label #close {
 
 @media screen and (max-width:1020px) {
 
-  .sidebar{
-    left: -500px;
-  }
 
   label #bars{
     display: block;
@@ -404,13 +414,7 @@ label #close {
     left: 80px;
   } */
 
-  .main_body{
-    margin-left: 0px;
-  }
 
-  .inner_search i{
-    left: 310px;
-  }
 
 }
 
@@ -421,12 +425,13 @@ label #close {
   }
 
   .inner_search i{
-    left: 110px;
+    left: 110px !important;
   }
 
 
 
 }
+
 @media screen and (max-width:720px) {
   .search_bar input{
     margin-left: 50px;
@@ -442,44 +447,34 @@ label #close {
   font-size: 22px;
   color: white;
   top: -8px;
-  left: 20px;
+  left: 20px !important;
 }
+
+label #close{
+  top: 70px;
+  left: 180px !important;
+}
+
 
 }
 
 @media screen and (max-width:415px) {
   .inner_search i{
-    left: 30px;
+    left: 10px !important;
   }
 
-}
-
-/* @media screen and (max-width:580px) {
-  .search_bar input{
-    width: 300px;
-    left: 80px;
-  }
-}
-
-@media screen and (max-width:480px) {
-  .search_bar input{
-    width: 250px;
-    left: 60px;
+  label #bars{
+    left: 10px;
+    font-size: 16px;
   }
 
   .inner_search i{
-    left: 76px;
+    font-size: 16px;
   }
 
-  .user_login .user_logo p{
-    width: 30px;
-    height: 30px;
-  }
+}
 
-} */
-
-
-@media screen and (max-width:385px) {
+/* @media screen and (max-width:385px) {
   .search_bar input{
     width: 200px;
     left: 60px;
@@ -488,4 +483,4 @@ label #close {
     font-size: 16px;
   }
 
-}
+} */
