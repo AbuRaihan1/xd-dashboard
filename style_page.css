@@ -1,5 +1,39 @@
 /* header start */
 
+
+/* scrollbar edit start */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+  background: #717171;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(33, 39, 105);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+
+
+::-webkit-scrollbar-thumb {
+  background: rgb(47, 53, 117);
+  border-radius: 10px;
+}
+
+/* scrollbar edit end */
+
+
+
+
+
+
 .header_wrapper {
   background: #2E4DD4;
   height: 80px;
@@ -129,7 +163,6 @@
 }
 
 .sidebar_logo {
-
   z-index: 5;
 }
 
@@ -185,7 +218,7 @@
 
 
 .sidebar ul li:first-child {
-  margin-top: 108px;
+ 
   font-weight: bold;
 }
 
@@ -196,7 +229,7 @@
   background: #5160ac;
 } */
 
-.sidebar a:hover::after {
+/* .sidebar a:hover::after {
   content: "";
   height: 20px;
   width: 2px;
@@ -205,7 +238,7 @@
   top: 12px;
   right: 10px;
   border-radius: 5px;
-}
+} */
 
 #check {
   display: none;
@@ -264,19 +297,23 @@ label #close {
   background: #5160ac;
 } */
 
-/* .collapse-item-sidebar li a {
-  margin-left: -15px;
-  padding-left: 10px;
-  border-bottom: 1px dotted lightgray;
-  border-radius: 50px;
-  color: #555;
-  font-size: 15px;
-  font-family: "robto";
-  border-radius: 5px;
-  background: transparent;
+.collapse-item-sidebar li{
+  margin-left: -18px;
+}
+/* 
+.collapse-item-sidebar li a{
+  line-height: 55px;
+} */
+/* .inner_first{
+  border:1px solid red;
+  
 } */
 
-/* .collapse-item-sidebar li a:hover {
+/* .collapse-item-sidebar li a:first-child{
+  margin-top: -10px;
+}
+
+.collapse-item-sidebar li a:hover {
   background: rgb(247, 240, 240);
 } */
 
@@ -300,6 +337,10 @@ label #close {
   display:flex;
   margin-left: 300px;
 } 
+
+.inner_search i{
+  left: 310px;
+}
 
 
 .header_wrapper{
@@ -329,16 +370,22 @@ label #close {
     margin-left: 0px;
   }
 
-  /* .inner_search i{
-    left: 95px;
-  } */
+  .inner_search i{
+    left: 310px;
+  }
 
 }
 
 @media screen and (max-width:960px) {
   .search_bar input{
     margin-left: 100px;
+    
   }
+
+  .inner_search i{
+    left: 110px;
+  }
+
 
 
 }
@@ -346,8 +393,26 @@ label #close {
   .search_bar input{
     margin-left: 50px;
     width: 200px;
+    display: none;
   }
 
+.copy_search{
+  display: none;
+}
+
+.inner_search i{
+  font-size: 22px;
+  color: white;
+  top: -8px;
+  left: 20px;
+}
+
+}
+
+@media screen and (max-width:415px) {
+  .inner_search i{
+    left: 30px;
+  }
 
 }
 
